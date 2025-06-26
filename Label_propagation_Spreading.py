@@ -14,6 +14,7 @@ rng = np.random.RandomState(42)
 random_unlabeled_points = rng.rand(len(y)) < 0.7  # Etiquetamos al azar el 70% de los datos
 labels = np.copy(y)
 labels[random_unlabeled_points] = -1  # -1 indica dato no etiquetado
+print(X)
 
 # Crear y entrenar el modelo de label propagation
 prop_model = LabelPropagation()
